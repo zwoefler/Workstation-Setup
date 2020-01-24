@@ -1,0 +1,17 @@
+---
+# Install software via apt package manager
+- name: Update packages
+  become: True
+  apt:
+    update_cache: yes
+
+- name: Install Software via apt
+  become: True
+  apt:
+    pkg:
+      - firefox
+      - git
+      - vim
+      - vagrant
+      - virtualbox
+    state: present

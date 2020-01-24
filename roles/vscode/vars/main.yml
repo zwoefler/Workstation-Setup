@@ -1,0 +1,4 @@
+---
+# Variables for the Role VS Code
+
+vscode_gpg_url: https://packages.microsoft.com/keys/microsoft.asc

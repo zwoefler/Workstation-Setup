@@ -1,0 +1,7 @@
+---
+# Install VS Code on Fedora
+- name: Install Key and Repo
+  dnf:
+    name: code
+    update_cache: yes
+    state: present
