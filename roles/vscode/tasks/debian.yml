@@ -14,7 +14,7 @@
 - name: Import VS Code apt repository
   become: True
   apt_repository:
-    repo: deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main
+    repo: "{{  vscode_apt_repository  }}"
     state: present
 
 - name: Update apt cache and Install apt-transport-https package
