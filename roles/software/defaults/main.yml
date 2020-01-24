@@ -1,0 +1,11 @@
+---
+# Packages that can be easily installed via the package manager
+software_packages: [
+  ansible,
+  firefox,
+  git,
+  terminator,
+  vagrant,
+  vim,
+  virtualbox,
+]

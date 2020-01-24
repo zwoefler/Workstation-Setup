@@ -5,19 +5,20 @@ This is my repository for my workstation setup with Ansible roles.
 
 ## Software I need on every machine
 - [ ] Debian
-    - [X] Firefox
-    - [ ] Docker
-    - [ ] Docker-Compose
     - [X] Ansible
+    - [X] Docker
+        - [ ]
+    - [ ] Docker-Compose
+    - [X] Firefox
+    - [X] Git
+    - [ ] Kubernetes
+    - [ ] SSH-Keys
+    - [ ] Spotify
+    - [X] Terminator
     - [X] Vagrant
+    - [X] Vim
     - [X] VirtualBox
     - [X] VS Code
-    - [X] Git
-    - [X] Terminator
-    - [ ] Kubernetes
-    - [X] Vim
-    - [ ] Spotify
-    - [ ] SSH-Keys
 
 - [ ] Fedora
     - [ ] Firefox

@@ -9,11 +9,5 @@
   become: True
   apt:
     pkg:
-      - firefox
-      - git
-      - vim
-      - vagrant
-      - virtualbox
-      - terminator
-      - ansible
+      "{{  software_packages  }}"
     state: present
