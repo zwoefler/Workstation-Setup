@@ -8,3 +8,12 @@
 - import_tasks: fedora.yml
   become: true
   when: ansible_os_family == 'RedHat'
+
+- name: Install the Docker-Engine - Community and containerd
+  become: True
+  package:
+    name:
+    - docker-ce
+    - docker-ce-cli
+    - containerd.io
+    state: present

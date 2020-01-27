@@ -6,7 +6,8 @@
       - docker-engine
     state: absent
 
-- name: Update the apt cache
+
+- name: Install Docker requirements and update the apt cache
   become: True
   apt:
     pkg:
@@ -32,14 +33,3 @@
     repo: "{{ docker_apt_repository }}"
     state: present
     update_cache: True
-
-
-- name: Install the Docker-Engine - Community and containerd
-  become: True
-  apt:
-    pkg:
-    - docker-ce
-    - docker-ce-cli
-    - containerd.io
-    state: present
-
