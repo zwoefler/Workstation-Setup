@@ -8,3 +8,9 @@
 - import_tasks: fedora.yml
   become: true
   when: ansible_os_family == 'RedHat'
+
+- name: Install software packages
+  become: true
+  package:
+    name: "{{  software_packages  }}"
+    state: present
