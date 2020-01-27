@@ -1,0 +1,27 @@
+---
+# Tasksfile to install the config-files to the workstation
+
+- name: Create User with SSH key
+  user:
+    name: vagrant
+    generate_ssh_key: yes
+
+
+- name: Checkout the Dotfile Repo into a temporary folder
+  git:
+    repo: "{{  https_git_dotfile_repo  }}"
+    dest: /tmp/dotfiles
+    version: "master"
+
+
+- name: Copy .bashrc from dotfile repo to location
+  copy:
+    src: "{{  bashrc_git_location  }}"
+    dest: "{{  user_main_folder  }}"
+    remote_src: yes
+
+- name: Copy .vimrc from dotfile repo to location
+  copy:
+    src: "{{  vimrc_git_location  }}"
+    dest: "{{  user_main_folder  }}"
+    remote_src: yes

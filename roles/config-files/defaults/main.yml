@@ -1,0 +1,10 @@
+---
+# Default variables for config files the Workstation
+ssh_git_dotfile_repo: "git@github.com:zwoefler/Dot-File-Repo.git"
+https_git_dotfile_repo: "https://github.com/zwoefler/Dot-File-Repo.git"
+
+# Dotfile locations
+bashrc_git_location: "/tmp/dotfiles/bash/.bashrc"
+vimrc_git_location: "/tmp/dotfiles/vim/.vimrc"
+
+user_main_folder: "~/"
