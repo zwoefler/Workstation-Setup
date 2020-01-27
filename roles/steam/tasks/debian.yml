@@ -1,0 +1,15 @@
+---
+# Task file for Steam on Debian machines
+- name: Add Steam Repository to apt
+  become: True
+  apt_repository:
+    repo: "{{  steam_apt_repository  }}"
+    state: present
+    update_cache: yes
+
+- name: Install Steam via apt
+  become: true
+  apt:
+    name: steam
+    state: present
+
