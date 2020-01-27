@@ -1,9 +1,19 @@
-# Workstation Setup
+# Workstation Ansible Setup
 This is my repository for my workstation setup with Ansible roles.
 
 
+## Example Playbook
+To install all required packages, use the `post_install.yml` Playbook.
 
-## Software I need on every machine
+
+## Requirements
+You will require a running instance of Ubuntu or Fedora.
+
+Tested and running on:
+- Ubuntu 18.04 LTS
+
+
+## Software included
 - [ ] Debian
     - [X] Ansible
     - [X] Docker
@@ -35,17 +45,14 @@ This is my repository for my workstation setup with Ansible roles.
     - [ ] Spotify
     - [ ] SSH-Keys
 
-
-
-## Configuration Files
+#### Configuration Files to be Included
 - Bashrc
 - Vimrc
 - Terminator-Settings
 - VS Code installed plugins and whitespace cutting
--
 
 
-## Additional: For Gaming
+#### Additional: For Gaming
 - Teamspeak
 - Steam
 - Dota2
