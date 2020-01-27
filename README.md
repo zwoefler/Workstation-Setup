@@ -56,3 +56,10 @@ Tested and running on:
 - Teamspeak
 - Steam
 - Dota2
+
+## ToDos
+- [ ] Installation script that puts **every** script in the correct location
+
+VS Code:
+- [ ] Install VS Code extensions
+- [ ] Put VS Code settings into correct location
