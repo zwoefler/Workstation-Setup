@@ -14,14 +14,14 @@
     version: "master"
 
 
-- name: Run the installation shell script
+- name: Find the installation shell script
   find:
     paths: "{{  dotfiles_location  }}"
     file_type: file
     patterns: '*.sh'
-    register: installation_file
+  register: installation_file
 
-- name:
+- name: Install dotfiles
   script:
     chdir: "{{  dotfiles_location  }}"
     cmd: "{{  installation_file  }}"
