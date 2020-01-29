@@ -10,18 +10,18 @@
 - name: Checkout the Dotfile Repo into a temporary folder
   git:
     repo: "{{  https_git_dotfile_repo  }}"
-    dest: /tmp/dotfiles
+    dest: "{{  dotfiles_location  }}"
     version: "master"
 
 
-- name: Copy .bashrc from dotfile repo to location
-  copy:
-    src: "{{  bashrc_git_location  }}"
-    dest: "{{  user_main_folder  }}"
-    remote_src: yes
+- name: Run the installation shell script
+  find:
+    paths: "{{  dotfiles_location  }}"
+    file_type: file
+    patterns: '*.sh'
+    register: installation_file
 
-- name: Copy .vimrc from dotfile repo to location
-  copy:
-    src: "{{  vimrc_git_location  }}"
-    dest: "{{  user_main_folder  }}"
-    remote_src: yes
+- name:
+  script:
+    chdir: "{{  dotfiles_location  }}"
+    cmd: "{{  installation_file  }}"
