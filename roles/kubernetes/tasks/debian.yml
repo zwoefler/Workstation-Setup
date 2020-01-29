@@ -1,0 +1,25 @@
+---
+- name: Install kuberentes dependencies
+  become: True
+  apt:
+    name:
+      - apt-transport-https
+    state: present
+
+- name: Install kubernetes GPG key
+  become: True
+  apt_key:
+    url: "{{  apt_kubectl_key  }}"
+    state: present
+
+- name: Add Kuberentes Repository
+  apt_repository:
+    repo: "{{  apt_kubectl_repo  }}"
+    state: present
+
+- name: Install Kubernetes
+  become: True
+  apt:
+    name: kubectl
+    state: present
+    update_cache: yes
