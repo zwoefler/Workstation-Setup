@@ -65,3 +65,15 @@ VS Code:
 - [ ] Put VS Code settings into correct location
 
 
+Pip:
+- [ ] Update pip with pip
+
+Mouse acceleration:
+- [ ] Deactivate mouse acceleration by default
+
+SSH key pair:
+- [ ] generate by default
+
+Install NPM:
+- [ ] Install VueJS
+- [ ] 
