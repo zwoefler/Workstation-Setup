@@ -17,13 +17,14 @@ Tested and running on:
 - [ ] Debian
     - [X] Ansible
     - [X] Docker
-        - [ ]
-    - [ ] Docker-Compose
+        - [X] Docker-Compose
     - [X] Firefox
     - [X] Git
     - [ ] Kubernetes
+    - [ ] Python3
     - [ ] SSH-Keys
     - [ ] Spotify
+    - [ ] Terraform
     - [X] Terminator
     - [X] Vagrant
     - [X] Vim
@@ -31,19 +32,7 @@ Tested and running on:
     - [X] VS Code
 
 - [ ] Fedora
-    - [ ] Firefox
-    - [ ] Docker
-    - [ ] Docker-Compose
-    - [ ] Ansible
-    - [ ] Vagrant
-    - [ ] VirtualBox
-    - [ ] VS Code
-    - [ ] Git
-    - [ ] Terminator
-    - [ ] Kubernetes
-    - [ ] Vim
-    - [ ] Spotify
-    - [ ] SSH-Keys
+
 
 #### Configuration Files to be Included
 - Bashrc
@@ -72,8 +61,11 @@ Mouse acceleration:
 - [X] Deactivate mouse acceleration by default
 
 SSH key pair:
-- [ ] generate by default
+- [X] generate by default
 
-Install NPM:
-- [ ] Install VueJS
-- [ ]
+Install Cloud Clients
+- [ ] GCloud
+- [ ] Azure
+
+Terminator Settings:
+- [ ] Termiantor Profile settings

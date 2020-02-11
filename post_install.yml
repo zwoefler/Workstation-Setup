@@ -4,5 +4,6 @@
     - software
     - docker
     - docker-compose
+    - kubernetes
     - user
     - config-files

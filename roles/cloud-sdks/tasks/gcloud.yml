@@ -1,0 +1,13 @@
+---
+- name: Download the GCloud archive
+  get_url:
+    url:
+    dest: "{{ temp_download_dir.path }}"
+  register: gcloud_archive
+  tags: gcloud
+
+- name: Unarchive downloaded GCloud archive
+  unarchive:
+    src: "{{ gcloud_download_base_url }}{{ gcloud_archive }}"
+    dest: "{{ temp_download_dir.path }}"
+  tags: gcloud
