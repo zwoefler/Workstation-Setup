@@ -1,0 +1,7 @@
+---
+- name: Update pip3
+  become: true
+  pip:
+    name: pip
+    executable: pip3
+    extra_args: --upgrade
