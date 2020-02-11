@@ -12,6 +12,7 @@
     repo: "{{  https_git_dotfile_repo  }}"
     dest: "{{  dotfiles_location  }}"
     version: "master"
+  register: dotfiles_git_temp
 
 
 - name: Find the installation shell script
@@ -25,3 +26,15 @@
   script:
     chdir: "{{  dotfiles_location  }}"
     cmd: "{{  installation_file  }}"
+
+- name: Disable Mouse Acceleration
+  templates:
+      src: "50-mouse-acceleration.conf"
+      dest: "/etc/X11/xorg.conf.d/50-mouse-acceleration.conf"
+      mode: '0644'
+
+- name: Remove DotFile temporary folder
+  file:
+    path: "{{  dotfiles_location  }}"
+    state: absent
+  when: dotfiles_git_temp.path is defined

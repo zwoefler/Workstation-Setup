@@ -61,19 +61,19 @@ Tested and running on:
 - [ ] Installation script that puts **every** script in the correct location
 
 VS Code:
-- [ ] Install VS Code extensions
-- [ ] Put VS Code settings into correct location
+- [X] Install VS Code extensions
+- [X] Put VS Code settings into correct location
 
 
 Pip:
-- [ ] Update pip with pip
+- [X] Update pip with pip
 
 Mouse acceleration:
-- [ ] Deactivate mouse acceleration by default
+- [X] Deactivate mouse acceleration by default
 
 SSH key pair:
 - [ ] generate by default
 
 Install NPM:
 - [ ] Install VueJS
-- [ ] 
+- [ ]
