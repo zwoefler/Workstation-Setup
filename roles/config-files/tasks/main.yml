@@ -6,7 +6,6 @@
     name: vagrant
     generate_ssh_key: yes
 
-
 - name: Checkout the Dotfile Repo into a temporary folder
   git:
     repo: "{{  https_git_dotfile_repo  }}"
@@ -23,17 +22,25 @@
   register: installation_file
 
 - name: Install dotfiles
-  script:
+  command:
     chdir: "{{  dotfiles_location  }}"
     cmd: "{{  installation_file  }}"
+    creates: "{{  dotfiles_location  }}"
 
-- name: Disable Mouse Acceleration
-  templates:
-      src: "50-mouse-acceleration.conf"
-      dest: "/etc/X11/xorg.conf.d/50-mouse-acceleration.conf"
-      mode: '0644'
+- name: Install python-psutil package
+  become: true
+  apt:
+    name: python-psutil
+    state: present
+
+- name: Disable Mouse Acceleration Gnome-Desktop
+  dconf:
+    key: "org/gnome/desktop/peripherals/mouse/accel-profile"
+    value: "\'flat\'"
+  tags: mouse-accel
 
 - name: Remove DotFile temporary folder
+  become: true
   file:
     path: "{{  dotfiles_location  }}"
     state: absent

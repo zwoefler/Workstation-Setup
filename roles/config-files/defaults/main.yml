@@ -6,3 +6,5 @@ https_git_dotfile_repo: "https://github.com/zwoefler/Dot-File-Repo.git"
 # Dotfile locations
 dotfiles_location: "/tmp/dotfiles/"
 user_main_folder: "~/"
+
+disable_mous_accel_cmd: "gsettings set org.gnome.desktop.peripherals.mouse accel-profile 'flat'"

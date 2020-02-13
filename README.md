@@ -69,3 +69,7 @@ Install Cloud Clients
 
 Terminator Settings:
 - [ ] Termiantor Profile settings
+
+## Lessons Learned
+#### using the DConf module
+13.02.2020 - Useing the DConf Module requires the value to be in a "GVariant format". This means you need to write your value `flat` like this: `\'flat\'`

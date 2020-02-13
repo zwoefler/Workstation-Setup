@@ -1,5 +1,9 @@
 - name: Add SSH Keys for the user martin
+  become: true
   user:
     name: martin
     generate_ssh_key: yes
     ssh_key_bits: 2048
+  tags:
+    - user
+    - ssh_keys

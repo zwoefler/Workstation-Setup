@@ -2,6 +2,7 @@
   roles:
     - vscode
     - software
+    - python
     - docker
     - docker-compose
     - kubernetes

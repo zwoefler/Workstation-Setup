@@ -1,13 +1,13 @@
 ---
 # tasks file for python3 settings
 
-- import_tasks: debian.yml
-  become: yes
-  when: ansible_os_family == 'Debian'
-
-- import_tasks: fedora.yml
+- name: Install Python-pip
   become: true
-  when: ansible_os_family == 'RedHat'
+  package:
+    name:
+      - python-pip
+      - python3-pip
+    state: latest
 
 - name: Update pip3
   become: true
