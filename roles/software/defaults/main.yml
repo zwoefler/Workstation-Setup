@@ -9,3 +9,7 @@ software_packages: [
   vim,
   virtualbox,
 ]
+
+rm_gnome_pkgs: [
+  rhythmbox
+]

@@ -14,3 +14,9 @@
   package:
     name: "{{  software_packages  }}"
     state: present
+
+- name: Remove unwanted Gnome packages
+  become: true
+  package:
+    name: "{{  rm_gnome_pkgs  }}"
+    state: absent

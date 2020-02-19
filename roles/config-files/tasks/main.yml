@@ -39,6 +39,11 @@
     value: "\'flat\'"
   tags: mouse-accel
 
+- name: Set touchpad Profile for LapTop
+  dconf:
+    key: "org/gnome/desktop/peripherals/touchpad/click-method"
+    value: "\'fingers\'"
+
 - name: Remove DotFile temporary folder
   become: true
   file:
