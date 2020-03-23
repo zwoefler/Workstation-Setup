@@ -8,6 +8,7 @@ software_packages: [
   vagrant,
   vim,
   virtualbox,
+  tree
 ]
 
 rm_gnome_pkgs: [

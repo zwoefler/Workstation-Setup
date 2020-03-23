@@ -1,11 +1,6 @@
 ---
 # Tasksfile to install the config-files to the workstation
 
-- name: Create User with SSH key
-  user:
-    name: vagrant
-    generate_ssh_key: yes
-
 - name: Checkout the Dotfile Repo into a temporary folder
   git:
     repo: "{{  https_git_dotfile_repo  }}"

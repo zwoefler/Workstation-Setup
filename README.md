@@ -47,6 +47,15 @@ Tested and running on:
 - Dota2
 
 ## ToDos
+### Setup for Xubuntu
+1. Remove all unnecessary programs/application like pidgin messanger
+2. Set Up key-Bindings to the Ubuntu standard
+    - Super + UpArrow = Fullscreen current window
+    - Super + Right/Left = Current window to the left or right site
+    - Super + SHIFT + Right/Left = Moves current window to the next screen
+    - CRTL + ALT + UpArrow/DownArrow = Switching between workspaces
+    ...
+
 - [ ] Installation script that puts **every** script in the correct location
 
 VS Code:
