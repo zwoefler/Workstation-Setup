@@ -89,3 +89,14 @@ TMUX:
 ## Lessons Learned
 #### using the DConf module
 13.02.2020 - Useing the DConf Module requires the value to be in a "GVariant format". This means you need to write your value `flat` like this: `\'flat\'`
+
+#### Enabling Touchpad three finger click
+Finding all properties for my system
+`xinput`.
+
+Receiving a list of devices. Find out the ID of the touchpad and list all settings: `xinput list-props {ID}`
+
+Change the `Synaptics Click Action` third field to `2`.
+`$ xinput set-prop 13 "Synaptics Click Action" 1 3 2 `
+
+Further Reading: [Synaptic Touchpad Arch Wiki](https://wiki.archlinux.org/index.php/Touchpad_Synaptics#Using_xinput_to_determine_touchpad_capabilities)
