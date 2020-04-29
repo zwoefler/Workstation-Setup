@@ -8,6 +8,16 @@
       - python-pip
       - python3-pip
     state: latest
+  tags:
+    - python
+
+- name: Update pip
+  become: true
+  pip:
+    name: pip
+    extra_args: --upgrade
+  tags:
+    - python
 
 - name: Update pip3
   become: true
@@ -15,3 +25,12 @@
     name: pip
     executable: pip3
     extra_args: --upgrade
+  tags:
+    - python
+
+- name: Install Jupyter Notebook
+  pip:
+    name: notebook
+    executable: pip3
+  tags:
+    - python
