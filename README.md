@@ -20,7 +20,8 @@ Tested and running on:
         - [X] Docker-Compose
     - [X] Firefox
     - [X] Git
-    - [ ] Kubernetes
+    - [X] Kubernetes
+        - [X] Helm
     - [ ] Python3
     - [X] SSH-Keys
     - [ ] Spotify
@@ -77,8 +78,8 @@ Install Cloud Clients
 - [ ] Azure
 
 Kubernetes:
-- [ ] Kubectl
-- [ ] Helm Version3 
+- [X] Kubectl
+- [X] Helm Version3 
 
 ## Lessons Learned
 #### using the DConf module
