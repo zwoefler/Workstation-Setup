@@ -1,25 +1,25 @@
 ---
-- name: Install kuberentes dependencies
+- name: Install helm dependencies
   become: True
   apt:
     name:
       - apt-transport-https
     state: present
 
-- name: Install kubernetes GPG key
+- name: Install helm GPG key
   become: True
   apt_key:
-    url: "{{  apt_kubectl_key  }}"
+    url: "{{  apt_helm_key  }}"
     state: present
 
-- name: Add Kuberentes Repository
+- name: Add helm Repository
   apt_repository:
-    repo: "{{  apt_kubectl_repo  }}"
+    repo: "{{  apt_helm_repo  }}"
     state: present
 
-- name: Install Kubernetes
+- name: Install helm
   become: True
   apt:
-    name: kubectl
+    name: helm 
     state: present
     update_cache: yes
