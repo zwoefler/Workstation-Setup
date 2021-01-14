@@ -20,9 +20,10 @@ Tested and running on:
         - [X] Docker-Compose
     - [X] Firefox
     - [X] Git
-    - [ ] Kubernetes
+    - [X] Kubernetes
+        - [X] Helm
     - [ ] Python3
-    - [ ] SSH-Keys
+    - [X] SSH-Keys
     - [ ] Spotify
     - [ ] Terraform
     - [X] Terminator
@@ -76,15 +77,9 @@ Install Cloud Clients
 - [ ] GCloud
 - [ ] Azure
 
-Terminator Settings:
-- [ ] Termiantor Profile settings
-
-
 Kubernetes:
-- [ ] Install Helm/Tiller
-
-TMUX:
-- [ ] Install Tmux
+- [X] Kubectl
+- [X] Helm Version3 
 
 ## Lessons Learned
 #### using the DConf module
