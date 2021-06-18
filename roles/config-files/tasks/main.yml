@@ -30,14 +30,14 @@
 
 - name: Disable Mouse Acceleration Gnome-Desktop
   dconf:
-    key: "org/gnome/desktop/peripherals/mouse/accel-profile"
-    value: "\'flat\'"
+    key: "/org/gnome/desktop/peripherals/mouse/accel-profile"
+    value: "flat"
   tags: mouse-accel
 
 - name: Set touchpad Profile for LapTop
   dconf:
-    key: "org/gnome/desktop/peripherals/touchpad/click-method"
-    value: "\'fingers\'"
+    key: "/org/gnome/desktop/peripherals/touchpad/click-method"
+    value: "fingers"
 
 - name: Remove DotFile temporary folder
   become: true
