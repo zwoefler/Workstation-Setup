@@ -28,6 +28,13 @@
     name: python-psutil
     state: present
 
+- name: Disable desktop icons for home and trash
+  gsetting:
+    user: martin
+    settings:
+      org.gnome.shell.extensions.desktop-icons show-trash: false
+      org.gnome.shell.extensions.desktop-icons show-home: false
+
 - name: Disable Mouse Acceleration Gnome-Desktop
   dconf:
     key: "/org/gnome/desktop/peripherals/mouse/accel-profile"
