@@ -6,6 +6,12 @@ flatpak_list_filter() {
     echo "$output" | awk '{print $2}' | grep "$query"
 }
 
+snap_list_filter() {
+    query="$1"
+    output=$(snap list)
+    echo "$output" | awk '{print $1}' | grep "$query"
+}
+
 # Start Microsoft Teams
 teams &
 
@@ -29,12 +35,21 @@ for item in "${flatpak_list[@]}"
 do
     result=$(flatpak_list_filter "$item")
     if [ -n "$result" ]; then
-        flatpak run $result
+        flatpak run $result &
     else
         echo "Item $item does not exist"
     fi
 done
 
 
-# Start Spotifyv
-spotify &
+# Start Spotify
+snap_list=("spotify")
+for item in "${snap_list[@]}"
+do
+    result=$(snap_list_filter "$item")
+    if [ -n "$result" ]; then
+        snap run $result &
+    else
+        echo "Item $item does not exist"
+    fi
+done
