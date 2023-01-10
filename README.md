@@ -22,6 +22,7 @@ Tested and running on:
     - [X] Git
     - [X] Kubernetes
         - [X] Helm
+    - [ ] Obsidian
     - [ ] Python3
     - [X] SSH-Keys
     - [ ] Spotify
