@@ -12,6 +12,8 @@ You will require a running instance of Ubuntu or Fedora.
 Tested and running on:
 - Ubuntu 18.04 LTS
 
+## o WATCH OUT
+- GSETTING: https://github.com/jistr/ansible-gsetting
 
 ## Software included
 - [ ] Debian
