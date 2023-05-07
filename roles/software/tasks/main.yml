@@ -5,10 +5,6 @@
   become: yes
   when: ansible_os_family == 'Debian'
 
-- import_tasks: fedora.yml
-  become: true
-  when: ansible_os_family == 'RedHat'
-
 - name: Install software packages
   become: true
   package:
