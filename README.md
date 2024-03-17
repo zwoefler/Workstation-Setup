@@ -2,7 +2,7 @@
 Setting up my Ubuntu Workstation after installation
 
 ## How to run
-`wget -O - https://github.com/zwoefler/Workstation-Setup/blob/master/setup.sh | bash`
+`wget -O - https://raw.githubusercontent.com/zwoefler/Workstation-Setup/master/setup.sh | bash`
 
 ## Requirements
 Tested and running on:
