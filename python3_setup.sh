@@ -8,7 +8,7 @@ python_libraries=(
 
 # Install Python pip
 sudo apt update
-sudo apt install -y python-pip
+sudo apt install -y python3-pip
 
 pip install --upgrade pip
 
