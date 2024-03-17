@@ -11,6 +11,9 @@ ssh-keygen -t rsa -b 4096 -f "$HOME/.ssh/id_rsa" -N ""
 sudo apt update
 sudo apt upgrade -y
 
+sudo apt install -y podman
+
+
 ##################
 # Install dotfiles
 ##################
