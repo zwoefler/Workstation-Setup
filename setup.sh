@@ -5,12 +5,18 @@
 ################
 ssh-keygen -t rsa -b 4096 -f "$HOME/.ssh/id_rsa" -N ""
 
-
 ############
 # Update apt
 ############
 sudo apt update
 sudo apt upgrade -y
+
+##################
+# Install dotfiles
+##################
+wget -O ~/.bashrc https://raw.githubusercontent.com/zwoefler/Dot-File-Repo/master/bash/.bashrc
+wget -O ~/.vimrc https://raw.githubusercontent.com/zwoefler/Dot-File-Repo/master/vim/.vimrc
+
 
 #################
 # Install Python3
