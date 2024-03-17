@@ -1,8 +1,0 @@
----
-# Install software via apt package manager
-- name: Update apt packages
-  become: True
-  apt:
-    upgrade: yes
-    update_cache: yes
-    cache_valid_time: 86400 # One day

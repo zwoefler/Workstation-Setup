@@ -1,3 +1,0 @@
----
-# Debian settings for Docker
-steam_apt_repository: "deb http://repo.steampowered.com/steam/ precise steam"

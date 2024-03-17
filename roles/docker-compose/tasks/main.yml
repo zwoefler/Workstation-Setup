@@ -1,7 +1,0 @@
----
-# Install Docker compose via pip
-- name: Install docker compose
-  become: True
-  pip:
-    name: docker-compose
-    executable: pip3

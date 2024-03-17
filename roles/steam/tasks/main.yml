@@ -1,9 +1,0 @@
----
-# Ansible role to install steam
-- import_tasks: debian.yml
-  become: yes
-  when: ansible_os_family == 'Debian'
-
-- import_tasks: fedora.yml
-  become: true
-  when: ansible_os_family == 'RedHat'
