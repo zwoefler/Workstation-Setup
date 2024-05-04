@@ -22,21 +22,19 @@ curl https://raw.githubusercontent.com/zwoefler/Workstation-Setup/master/setup.s
 ## Applications & Profiles
 The applications are sorted into profiles.
 The profile are:
-- Base
-- Developing
-- Gaming
-- Creative
-- Personal
 
 #### Base
-- [ ] Firefox
-- [ ] Obsidian
-- [ ] VSCode
+- apt update
+- Python3-pip
+- git
+- bashrc
+- vimrc
+
 
 #### Developing
-- [ ] KVM
-- [ ] nerdctl
-- [ ] VmChamp
+- [X] KVM
+- [X] nerdctl
+- [X] VmChamp
 
 #### Gaming
 - [ ] Steam
@@ -52,6 +50,9 @@ The profile are:
 #### Personal
 - [ ] Signal
 - [ ] Spotify
+- [ ] Firefox
+- [ ] Obsidian
+- [ ] VSCode
 
 
 #### Nice to have
