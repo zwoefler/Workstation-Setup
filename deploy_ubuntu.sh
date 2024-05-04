@@ -9,14 +9,16 @@ sudo apt update
 
 echo "Installing dotfiles for"
 echo "VIM"
-echo "BASHRC"
 wget -O ~/.bashrc https://raw.githubusercontent.com/zwoefler/Dot-File-Repo/master/bash/.bashrc
+echo "BASHRC"
 wget -O ~/.vimrc https://raw.githubusercontent.com/zwoefler/Dot-File-Repo/master/vim/.vimrc
 
 
 echo "Installing python3-pip"
 sudo apt install -y python3-pip
 
+echo "Removing SNAP"
+sudo apt remove -y --purge snapd
 
 echo "Sourcing .bashrc"
 source ~/.bashrc
