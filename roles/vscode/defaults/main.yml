@@ -1,4 +1,0 @@
----
-# Fallback default values for VS Code
-vscode_gpg_url: https://packages.microsoft.com/keys/microsoft.asc
-vscode_apt_repository: "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
