@@ -71,5 +71,4 @@ MOst stuff luckily works in a browser nowadays:
 
 
 ## Inspiration
-Took some inspiration from: @athackst: https://github.com/athackst/workstation_setup
-- 
+Took some inspiration from: @athackst: https://github.com/athackst/workstation_setup 
