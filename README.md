@@ -58,12 +58,15 @@ The profile are:
 MOst stuff luckily works in a browser nowadays:
 - [ ] Spotify
 - [ ] Discord
-
+- [ ] Python3-pip
 
 **Configurations**
 - [ ] colored git output in console
 - [ ] .bashrc
 - [ ] .vimrc
+
+#### REMOVE
+- [ ] snap `sudo apt remove --purge snapd`
 
 
 ## Inspiration
