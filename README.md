@@ -60,7 +60,12 @@ The profile are:
 MOst stuff luckily works in a browser nowadays:
 - [ ] Spotify
 - [ ] Discord
-- 
+
+
+**Configurations**
+- [ ] colored git output in console
+- [ ] .bashrc
+- [ ] .vimrc
 
 
 ## Inspiration
