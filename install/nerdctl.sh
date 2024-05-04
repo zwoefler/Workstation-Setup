@@ -3,7 +3,7 @@
 install_nerdctl() {
     echo "Installing nerdctl"
     wget https://github.com/containerd/nerdctl/releases/download/v1.7.6/nerdctl-full-1.7.6-linux-amd64.tar.gz
-    tar Cxzvvf /usr/local nerdctl-full-1.7.6-linux-amd64.tar.gz
+    sudo tar Cxzvvf /usr/local nerdctl-full-1.7.6-linux-amd64.tar.gz
     containerd-rootless-setuptool.sh install
     echo "Successfully installed NERDCTL"
 }
