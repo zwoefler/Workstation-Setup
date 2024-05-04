@@ -1,45 +1,50 @@
 #!/bin/bash
 
+# Colors for echo messages
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+
 install_vmchamp() {
-    echo "Downloading and installing VmChamp..."
+    echo "${GREEN}Downloading and installing VmChamp...${NC}"
     wget https://github.com/wubbl0rz/VmChamp/releases/download/v0.0.7/VmChamp-linux-v0.0.7-amd64
     mv VmChamp-linux-v0.0.7-amd64 vmchamp
     chmod +x vmchamp
     sudo mv vmchamp /usr/local/bin/
-    echo "VmChamp installed successfully."
+    echo "${GREEN}VmChamp installed successfully.${NC}"
 
-    echo "checking requirements kvm and libvirt"
+    echo "${GREEN}checking requirements kvm and libvirt${NC}"
     if ! dpkg -l | grep -q qemu-kvm; then
-        echo "KVM is not installed. Installing..."
+        echo "${GREEN}KVM is not installed. Installing...${NC}"
         sudo apt update
         sudo apt install -y qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
     fi
 
-    echo "Adding $USER to group libvirt and kvm"
+    echo "${GREEN}Adding $USER to group libvirt and kvm${NC}"
     sudo adduser "$USER" libvirt
     sudo adduser "$USER" kvm
 }
 
 
 uninstall_vmchamp() {
-    echo "Uninstalling VmChamp..."
+    echo "${GREEN}Uninstalling VmChamp...${NC}"
     sudo rm -rf /usr/local/bin/vmchamp
-    echo "VmChamp uninstalled successfully."
+    echo "${GREEN}VmChamp uninstalled successfully.${NC}"
     
-    echo "Uninstalling packages..."
+    echo "${GREEN}Uninstalling packages...${NC}"
     sudo apt purge -y qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
     sudo apt autoremove -y
-    echo "Packages uninstalled successfully."
+    echo "${GREEN}Packages uninstalled successfully.${NC}"
 
-    echo "Removing user from groups..."
+    echo "${GREEN}Removing user from groups...${NC}"
     sudo deluser "$USER" libvirt
     sudo deluser "$USER" kvm
-    echo "User removed from groups successfully."
+    echo "${GREEN}User removed from groups successfully.${NC}"
 }
 
 check_CPU_supports_virtualisation() {
     if ! egrep -c '(vmx|svm)' /proc/cpuinfo &> /dev/null; then
-        echo "ERROR: Your CPU does not support virtualization."
+        echo "${RED}ERROR: Your CPU does not support virtualization.${NC}"
         exit 1
     fi
 }
@@ -49,7 +54,7 @@ if ! command -v vmchamp &> /dev/null; then
     check_CPU_supports_virtualisation
     install_vmchamp
 else
-    echo "VmChamp is already installed."
+    echo "${GREEN}VmChamp is already installed."
 fi
 
 if [ "$1" == "uninstall" ]; then
