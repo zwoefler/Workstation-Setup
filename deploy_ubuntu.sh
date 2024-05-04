@@ -34,6 +34,10 @@ create_ssh_key(){
 # INSTALLING PROFILES 
 ###############################################################################
 
+personal_profile() {
+    echo "Installing PERSONAL profile"
+}
+
 gaming_profile() {
     echo "Installing GAMING profile"
     sudo apt install -y steam-installer
