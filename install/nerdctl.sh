@@ -1,6 +1,14 @@
 #!/bin/bash
 
 install_nerdctl() {
+    echo "Installing Rootless nerdctl"
+    echo "Checking requirement uidmap package is installed"
+    if ! dpkg -l | grep -q uidmap; then
+        echo "uidmap not installed. Installing..."
+        sudo apt update
+        sudo apt install -y uidmap 
+    fi
+
     echo "Installing nerdctl"
     wget https://github.com/containerd/nerdctl/releases/download/v1.7.6/nerdctl-full-1.7.6-linux-amd64.tar.gz
     sudo tar Cxzvvf /usr/local nerdctl-full-1.7.6-linux-amd64.tar.gz
