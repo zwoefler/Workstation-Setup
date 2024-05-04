@@ -22,7 +22,7 @@ Automating the setup process for different usage profiles:
 
 ## Usage
 ```SHELL
-https://raw.githubusercontent.com/zwoefler/Workstation-Setup/master/setup.sh | sh -
+curl https://raw.githubusercontent.com/zwoefler/Workstation-Setup/master/setup.sh | bash -
 ```
 
 
