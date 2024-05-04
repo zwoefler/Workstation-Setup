@@ -10,6 +10,7 @@ print_help() {
     echo ""
 }
 
+
 install_config_files(){
     echo "Installing configuration files..."
     echo "VIM"
@@ -19,6 +20,7 @@ install_config_files(){
     echo "Configuration files installed successfully."
 }
 
+
 create_ssh_key(){
     if [ ! -f "$HOME/.ssh/id_rsa" ]; then
         echo "Creating SSH Key for $USER at ~/.ssh/id_rsa"
@@ -27,6 +29,16 @@ create_ssh_key(){
         echo "SSH Key already exists. Skipping creation."
     fi
 }
+
+###############################################################################
+# INSTALLING PROFILES 
+###############################################################################
+
+gaming_profile() {
+    echo "Installing GAMING profile"
+    sudo apt install -y steam-installer
+}
+
 
 install_base() {
     echo "Updating apt packages"
@@ -44,6 +56,11 @@ install_base() {
     echo "Sourcing .bashrc"
     source ~/.bashrc
 }
+
+
+###############################################################################
+# COMMAND LINE PARAMETERS
+###############################################################################
 
 # Check for command line options
 if [[ "$1" == "--help" || "$1" == "-h" ]]; then
