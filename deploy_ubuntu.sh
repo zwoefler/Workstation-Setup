@@ -17,7 +17,6 @@ install_config_files(){
     echo "BASHRC"
     wget -O ~/.vimrc https://raw.githubusercontent.com/zwoefler/Dot-File-Repo/master/vim/.vimrc
     echo "Configuration files installed successfully."
-    exit 0
 }
 
 create_ssh_key(){
