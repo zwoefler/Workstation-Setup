@@ -25,11 +25,13 @@ The profile are:
 
 #### Base
 - apt update
-- Python3-pip
+- python3-pip
 - git
-- bashrc
-- vimrc
-
+- colored git output in console
+- .bashrc
+- .vimrc
+- remove snap
+- add SSH key
 
 #### Developing
 - [X] KVM
@@ -59,15 +61,6 @@ The profile are:
 MOst stuff luckily works in a browser nowadays:
 - [ ] Spotify
 - [ ] Discord
-- [ ] Python3-pip
-
-**Configurations**
-- [ ] colored git output in console
-- [ ] .bashrc
-- [ ] .vimrc
-
-#### REMOVE
-- [ ] snap `sudo apt remove --purge snapd`
 
 
 ## Inspiration
