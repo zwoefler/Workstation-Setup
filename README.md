@@ -15,8 +15,18 @@ Streamline my personal setup process of new machines.
 
 ## Usage
 ```SHELL
-curl https://raw.githubusercontent.com/zwoefler/Workstation-Setup/master/setup.sh | bash -
+curl https://raw.githubusercontent.com/zwoefler/Workstation-Setup/master/deploy_ubuntu.sh | bash -
 ```
+
+Run the help command:
+```SHELL
+curl https://raw.githubusercontent.com/zwoefler/Workstation-Setup/master/deploy_ubuntu.sh | bash -s -- --help
+```
+
+Bash needs to be called `bash -s -- --help`. Appending `--` treats everything after it as an argument, not a bash option.
+
+Bash Features > Invoking Bash. p.92
+https://www.gnu.org/software/bash/manual/bash.pdf
 
 
 ## Applications & Profiles
