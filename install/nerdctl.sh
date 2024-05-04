@@ -1,10 +1,8 @@
 #!/bin/bash
 
-
-
 install_nerdctl() {
     echo "Installing nerdctl"
-    curl -fsSL https://github.com/containerd/nerdctl/releases/download/v1.7.6/nerdctl-1.7.6-linux-amd64.tar.gz
+    wget https://github.com/containerd/nerdctl/releases/download/v1.7.6/nerdctl-1.7.6-linux-amd64.tar.gz
     tar Cxzvvf /usr/local nerdctl-full-1.7.6-linux-amd64.tar.gz
     containerd-rootless-setuptool.sh install
     echo "Successfully installed NERDCTL"
