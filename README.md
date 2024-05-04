@@ -2,18 +2,11 @@
 
 Automate setup of Ubuntu machine (in the future maybe Debian) by maintaining this public git repository.
 
-
 Tested on:
 - [X] Ubuntu 22.04
 
 ## Intent
 Streamline my personal setup process of new machines.
-Automating the setup process for different usage profiles:
-- General / Base
-- Developing
-- Gaming
-- Creative
-
 
 ## What this isn't!
 - Not a general purpose installtion framework
@@ -33,6 +26,7 @@ The profile are:
 - Developing
 - Gaming
 - Creative
+- Personal
 
 #### Base
 - [ ] Firefox
@@ -54,6 +48,10 @@ The profile are:
 - [ ] Inkscape
 - [ ] Davinci Resolve
 - [ ] OBS Studio
+
+#### Personal
+- [ ] Signal
+- [ ] Spotify
 
 
 #### Nice to have
