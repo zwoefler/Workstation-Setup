@@ -1,7 +1,13 @@
 # Install Applications and prerequisites
-Install scripts to install applications
+Scripts to install applications
 
-Each script has the name of the application being installed and installs all necessary requirements, like a "standalone"
+Each script carries the name of the application being installed and installs all necessary requirements, like a "standalone"
+
+USAGE:
+```SHELL
+curl https://raw.githubusercontent.com/zwoefler/Workstation-Setup/master/install/<SCRIP>.sh | bash -
+```
+
 
 ## ToDO
 - Add uninstall function
