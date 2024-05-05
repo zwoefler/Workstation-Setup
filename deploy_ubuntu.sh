@@ -41,6 +41,15 @@ create_ssh_key(){
 # INSTALLING PROFILES 
 ###############################################################################
 
+install_applications(){
+    local applications="$1"
+
+    for app in "${applications[@]}"; do
+        curl "${BASE_URL}${app}.sh" | bash -
+    done
+}
+
+
 creative_profile() {
     echo "Installting CREATIVE profile"
 }
@@ -52,9 +61,7 @@ developer_profile() {
         "nerdctl"
         "vmchamp"
     )
-    for app in "${applications[@]}"; do
-        curl "${BASE_URL}${app}.sh" | bash -
-    done
+    install_applications "$applications"
 }
 
 
@@ -63,9 +70,7 @@ gaming_profile() {
     applications=(
         "steam"
     )
-    for app in "${applications[@]}"; do
-        curl "${BASE_URL}${app}.sh" | bash -
-    done
+    install_applications "$applications"
 }
 
 
