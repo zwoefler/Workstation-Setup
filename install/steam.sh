@@ -34,7 +34,24 @@ install() {
 
 
 uninstall() {
-    echo "[STEAM-INSTALL] Uninstalling Steam"
+    echo "[STEAM-UNINSTALL] Uninstalling Steam"
+    echo "[STEAM-UNINSTALL] Removing apt packages"
+    sudo apt remove -y \
+      libgl1-mesa-dri:amd64 \
+      libgl1-mesa-dri:i386 \
+      libgl1-mesa-glx:amd64 \
+      libgl1-mesa-glx:i386 \
+      steam
+
+    echo "[STEAM-UNINSTALL] Removing steam lists"
+    sudo rm /etc/apt/sources.list.d/steam*
+
+    echo "[STEAM-UNINSTALL] Removing GPG key"
+    /usr/share/keyrings/steam.gpg
+
+    echo "[STEAM_UNINSTALL] Remove i386 architeture that dpkg is aware off"
+    sudo dpkg --remove-architecture i386
+
 }
 
 
