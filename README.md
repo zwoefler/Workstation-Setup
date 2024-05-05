@@ -53,10 +53,10 @@ The applications are sorted into profiles.
 - [X] Steam
 - [ ] NVidia Graphics Driver
 - [ ] WINE
-- [ ] Gimp
-- [ ] Inkscape
+- [X] Gimp
+- [X] Inkscape
 - [ ] Davinci Resolve
-- [ ] OBS Studio
+- [X] OBS Studio
 - [ ] Signal
 - [ ] Spotify
 - [ ] Firefox
