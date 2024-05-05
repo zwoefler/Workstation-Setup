@@ -1,16 +1,16 @@
 # Ubuntu Machine Setup 
 
-Automate setup of Ubuntu machine (in the future maybe Debian) by maintaining this public git repository.
+Automate setup of Ubuntu machine.
 
 Tested on:
 - [X] Ubuntu 22.04
 
 ## Intent
 Streamline my personal setup process of new machines.
-
-## What this isn't!
-- Not a general purpose installtion framework
-- Doesn't cover everry usecase
+Run installation directly from the web:
+```SHELL
+curl https://raw.githubusercontent.com/zwoefler/Workstation-Setup/master/deploy_ubuntu.sh | bash -s -- developer 
+```
 
 
 ## Usage
@@ -31,7 +31,6 @@ https://www.gnu.org/software/bash/manual/bash.pdf
 
 ## Applications & Profiles
 The applications are sorted into profiles.
-The profile are:
 
 #### Base
 - apt update
