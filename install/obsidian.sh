@@ -7,7 +7,7 @@ OBSIDIAN_VERSION=1.5.12
 install() {
     echo "[OBSIDIAN-INSTALL] Installing Obsidian"
     wget "https://github.com/obsidianmd/obsidian-releases/releases/download/v${OBSIDIAN_VERSION}/obsidian_${OBSIDIAN_VERSION}_amd64.deb"
-    sudo apt install ./obsidian_${OBSIDIAN_VERSION}_amd64.deb
+    sudo apt install -y ./obsidian_${OBSIDIAN_VERSION}_amd64.deb
     rm ./obsidian_${OBSIDIAN_VERSION}_amd64.deb
 }
 
