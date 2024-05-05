@@ -47,8 +47,13 @@ creative_profile() {
 developer_profile() {
     echo "Installing DEVELOPER profile"
     BASE_URL="https://raw.githubusercontent.com/zwoefler/Workstation-Setup/master/install/"
-    curl "${BASE_URL}nerdctl.sh" | bash -
-    curl "${BASE_URL}vmchamp.sh" | bash -
+    applications=(
+        "nerdctl"
+        "vmchamp"
+    )
+    for app in "${applications[@]}"; do
+        curl "${BASE_URL}${app}.sh" | bash -
+    done
 }
 
 
