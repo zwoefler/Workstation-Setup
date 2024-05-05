@@ -5,7 +5,7 @@ OBSIDIAN_VERSION=1.5.12
 
 
 install() {
-    echo "Installing Obsidian"
+    echo "[OBSIDIAN-INSTALL] Installing Obsidian"
     wget "https://github.com/obsidianmd/obsidian-releases/releases/download/v${OBSIDIAN_VERSION}/obsidian_${OBSIDIAN_VERSION}_amd64.deb"
     sudo apt install ./obsidian_${OBSIDIAN_VERSION}_amd64.deb
     rm ./obsidian_${OBSIDIAN_VERSION}_amd64.deb
@@ -32,7 +32,7 @@ if [ "$1" == "uninstall" ]; then
 fi
 
 if command -v obsidian &> /dev/null; then
-    echo -e "obsidian is already installed."
+    echo -e "[OBSIDIAN-INSTALL] Obsidian is already installed."
 else
     install
 fi
