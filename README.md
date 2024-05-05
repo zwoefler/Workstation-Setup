@@ -72,5 +72,15 @@ MOst stuff luckily works in a browser nowadays:
 - [ ] Discord
 
 
+## Issues
+- [ ] Every echo of my script should have `[INSTALL-STEP]` in the output
+- [ ] Newline between steps in output
+- [ ] Add Uninstall function in deploy_ubuntu `--uninstall`
+- [ ] Run from web, detect running from web using URLs, otherwise use local files
+
+
+
+
+
 ## Inspiration
 Took some inspiration from: @athackst: https://github.com/athackst/workstation_setup 
