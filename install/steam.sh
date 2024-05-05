@@ -3,6 +3,8 @@
 
 install() {
     echo "Installing Steam"
+    sudo apt update && sudo apt upgrade
+    sudo dpkg --add-architecture i386
     echo "Install Steam on Ubuntu via Steam APT Repository"
     echo "Importing GPG key"
     curl -s http://repo.steampowered.com/steam/archive/stable/steam.gpg | sudo gpg --dearmor -o /usr/share/keyrings/steam.gpg > /dev/null
@@ -19,9 +21,9 @@ install() {
       libgl1-mesa-dri:i386 \
       libgl1-mesa-glx:amd64 \
       libgl1-mesa-glx:i386 \
-      steam-launcher
+      steam
 
-    echo "Remove steam extra source list - redundant lists"
+    echo "Remove extra lists"
     sudo rm /etc/apt/sources.list.d/steam-beta.list
     sudo rm /etc/apt/sources.list.d/steam-stable.list
 
