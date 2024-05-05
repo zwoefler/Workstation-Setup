@@ -38,3 +38,4 @@ else
     install
 fi
 
+# https://www.spotify.com/us/download/linux/
