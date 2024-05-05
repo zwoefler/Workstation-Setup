@@ -1,5 +1,7 @@
 #!/bin/bash
 
+BASE_URL="https://raw.githubusercontent.com/zwoefler/Workstation-Setup/master/install/"
+
 print_help() {
     echo "Usage: $0 [options]"
     echo "No options provided executes the base routine"
@@ -46,7 +48,6 @@ creative_profile() {
 
 developer_profile() {
     echo "Installing DEVELOPER profile"
-    BASE_URL="https://raw.githubusercontent.com/zwoefler/Workstation-Setup/master/install/"
     applications=(
         "nerdctl"
         "vmchamp"
@@ -59,8 +60,14 @@ developer_profile() {
 
 gaming_profile() {
     echo "Installing GAMING profile"
-    sudo apt install -y steam-installer
+    applications=(
+        "steam"
+    )
+    for app in "${applications[@]}"; do
+        curl "${BASE_URL}${app}.sh" | bash -
+    done
 }
+
 
 
 install_base() {
