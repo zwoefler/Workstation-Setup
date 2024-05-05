@@ -46,6 +46,8 @@ creative_profile() {
 
 developer_profile() {
     echo "Installing DEVELOPER profile"
+    curl https://raw.githubusercontent.com/zwoefler/Workstation-Setup/master/install/nerdctl.sh | bash -
+    curl https://raw.githubusercontent.com/zwoefler/Workstation-Setup/master/install/vmchamp.sh | bash -
 }
 
 
