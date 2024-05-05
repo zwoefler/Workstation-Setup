@@ -19,21 +19,21 @@ print_help() {
 
 
 install_config_files(){
-    echo "Installing configuration files..."
-    echo "VIM"
+    echo "[DEPLOY UBUNTU] Installing configuration files..."
+    echo "[DEPLOY UBUNTU] VIM"
     wget -O ~/.bashrc https://raw.githubusercontent.com/zwoefler/Dot-File-Repo/master/bash/.bashrc
-    echo "BASHRC"
+    echo "[DEPLOY UBUNTU] BASHRC"
     wget -O ~/.vimrc https://raw.githubusercontent.com/zwoefler/Dot-File-Repo/master/vim/.vimrc
-    echo "Configuration files installed successfully."
+    echo "[DEPLOY UBUNTU] Configuration files installed successfully."
 }
 
 
 create_ssh_key(){
     if [ ! -f "$HOME/.ssh/id_rsa" ]; then
-        echo "Creating SSH Key for $USER at ~/.ssh/id_rsa"
+        echo "[DEPLOY UBUNTU] Creating SSH Key for $USER at ~/.ssh/id_rsa"
         ssh-keygen -t rsa -b 4096 -f "$HOME/.ssh/id_rsa" -N ""
     else
-        echo "SSH Key already exists. Skipping creation."
+        echo "[DEPLOY UBUNTU] SSH Key already exists. Skipping creation."
     fi
 }
 
@@ -51,12 +51,12 @@ install_applications(){
 
 
 creative_profile() {
-    echo "Installting CREATIVE profile"
+    echo "[DEPLOY UBUNTU] Installting CREATIVE profile"
 }
 
 
 developer_profile() {
-    echo "Installing DEVELOPER profile"
+    echo "[DEPLOY UBUNTU] Installing DEVELOPER profile"
     applications=(
         "nerdctl"
         "vmchamp"
@@ -66,7 +66,7 @@ developer_profile() {
 
 
 gaming_profile() {
-    echo "Installing GAMING profile"
+    echo "[DEPLOY UBUNTU] Installing GAMING profile"
     applications=(
         "steam"
     )
@@ -76,25 +76,25 @@ gaming_profile() {
 
 
 install_base() {
-    echo "Updating apt packages"
+    echo "[DEPLOY UBUNTU] Updating apt packages"
     sudo apt update
 
     create_ssh_key
     install_config_files
     
-    echo "Installing python3-pip"
+    echo "[DEPLOY UBUNTU] Installing python3-pip"
     sudo apt install -y python3-pip
     
-    echo "Removing SNAP"
+    echo "[DEPLOY UBUNTU] Removing SNAP"
     sudo apt remove -y --purge snapd
     
-    echo "Sourcing .bashrc"
+    echo "[DEPLOY UBUNTU] Sourcing .bashrc"
     source ~/.bashrc
 }
 
 
 personal_profile() {
-    echo "Installing PERSONAL profile"
+    echo "[DEPLOY UBUNTU] Installing PERSONAL profile"
 }
 
 
