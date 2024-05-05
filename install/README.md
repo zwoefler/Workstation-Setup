@@ -10,4 +10,5 @@ curl https://raw.githubusercontent.com/zwoefler/Workstation-Setup/master/install
 
 
 ## ToDO
-- Add uninstall function
+- [ ] Add uninstall function
+- [ ] Basic setup for script: Install, Uninstall section, CLI parameters check if isntalled, 
