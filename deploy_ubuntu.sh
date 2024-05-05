@@ -5,8 +5,13 @@ print_help() {
     echo "No options provided executes the base routine"
     echo ""
     echo "Options:"
-    echo "  config      Install only configuration files"
-    echo "  --help, -h  Show this help message"
+    echo "  config       Install only configuration files"
+    echo "  base         Install base profile"
+    echo "  developer    Install developer profile"
+    echo "  gaming       Install gaming profile"
+    echo "  creative     Install creative profile"
+    echo "  personal     Install personal profile"
+    echo "  --help, -h   Show this help message"
     echo ""
 }
 
@@ -34,9 +39,15 @@ create_ssh_key(){
 # INSTALLING PROFILES 
 ###############################################################################
 
-personal_profile() {
-    echo "Installing PERSONAL profile"
+creative_profile() {
+    echo "Installting CREATIVE profile"
 }
+
+
+developer_profile() {
+    echo "Installing DEVELOPER profile"
+}
+
 
 gaming_profile() {
     echo "Installing GAMING profile"
@@ -62,20 +73,40 @@ install_base() {
 }
 
 
+personal_profile() {
+    echo "Installing PERSONAL profile"
+}
+
+
 ###############################################################################
 # COMMAND LINE PARAMETERS
 ###############################################################################
 
-# Check for command line options
-if [[ "$1" == "--help" || "$1" == "-h" ]]; then
-    print_help
-    exit 0
-fi
 
-# If config option is provided, install only config files
-if [ "$1" == "config" ]; then
-    install_config_files
-    exit 0
-fi
-
-install_base
+# Handle profile options using a case statement
+case "$1" in
+    base)
+        install_base
+        ;;
+    config)
+        install_config_files
+        ;;
+    creative)
+        creative_profile
+        ;;
+    developer)
+        developer_profile
+        ;;
+    gaming)
+        gaming_profile
+        ;;
+    personal)
+        personal_profile
+        ;;
+    help | --help | -h)
+        print_help
+        ;;
+    *) # If invalid option is provided, execute base routine
+        print_help
+        ;;
+esac
