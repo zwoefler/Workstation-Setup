@@ -3,7 +3,7 @@
 
 install() {
     echo "Installing Steam"
-    sudo apt update && sudo apt upgrade
+    sudo apt update && sudo apt upgrade -y
     sudo dpkg --add-architecture i386
     echo "Install Steam on Ubuntu via Steam APT Repository"
     echo "Importing GPG key"
@@ -16,7 +16,7 @@ install() {
     sudo apt update
 
     echo "Install Steam via package manager"
-    sudo apt-get install \
+    sudo apt install -y \
       libgl1-mesa-dri:amd64 \
       libgl1-mesa-dri:i386 \
       libgl1-mesa-glx:amd64 \
