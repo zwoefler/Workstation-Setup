@@ -31,6 +31,11 @@ https://www.gnu.org/software/bash/manual/bash.pdf
 
 ## Applications & Profiles
 The applications are sorted into profiles.
+- Base
+- Developing
+- Gaming
+- Creative
+- Personal
 
 #### Base
 - apt update
@@ -42,27 +47,20 @@ The applications are sorted into profiles.
 - remove snap
 - add SSH key
 
-#### Developing
 - [X] KVM
 - [X] nerdctl
 - [X] VmChamp
-
-#### Gaming
-- [ ] Steam
+- [X] Steam
 - [ ] NVidia Graphics Driver
 - [ ] WINE
-
-#### Creative
 - [ ] Gimp
 - [ ] Inkscape
 - [ ] Davinci Resolve
 - [ ] OBS Studio
-
-#### Personal
 - [ ] Signal
 - [ ] Spotify
 - [ ] Firefox
-- [ ] Obsidian
+- [X] Obsidian
 - [ ] VSCode
 
 
