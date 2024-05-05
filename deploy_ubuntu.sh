@@ -51,12 +51,28 @@ install_applications(){
 
 
 creative_profile() {
-    echo "[DEPLOY UBUNTU] Installting CREATIVE profile"
+    echo "[DEPLOY UBUNTU] Installing CREATIVE profile"
 }
 
 
 developer_profile() {
     echo "[DEPLOY UBUNTU] Installing DEVELOPER profile"
+
+    echo "[DEPLOY UBUNTU] Updating apt packages"
+    sudo apt update
+
+    create_ssh_key
+    install_config_files
+    
+    echo "[DEPLOY UBUNTU] Installing python3-pip"
+    sudo apt install -y python3-pip
+    
+    echo "[DEPLOY UBUNTU] Removing SNAP"
+    sudo apt remove -y --purge snapd
+    
+    echo "[DEPLOY UBUNTU] Sourcing .bashrc"
+    source ~/.bashrc
+
     applications=(
         "nerdctl"
         "vmchamp"
@@ -76,31 +92,24 @@ gaming_profile() {
 
 
 install_base() {
-    echo "[DEPLOY UBUNTU] Updating apt packages"
-    sudo apt update
-
-    create_ssh_key
-    install_config_files
-    
-    echo "[DEPLOY UBUNTU] Installing python3-pip"
-    sudo apt install -y python3-pip
-    
-    echo "[DEPLOY UBUNTU] Removing SNAP"
-    sudo apt remove -y --purge snapd
-    
-    echo "[DEPLOY UBUNTU] Sourcing .bashrc"
-    source ~/.bashrc
+    echo "[DEPLOY UBUNTU] Installing BASE profile"
+    sudo apt install firefox
 }
 
 
 personal_profile() {
     echo "[DEPLOY UBUNTU] Installing PERSONAL profile"
+    applications=(
+        "obsidian"
+    )
+    install_applications "$applications"
 }
 
 
 ###############################################################################
 # COMMAND LINE PARAMETERS
 ###############################################################################
+# When script is offline, or offline options is provided dont use URLs
 
 
 # Handle profile options using a case statement
