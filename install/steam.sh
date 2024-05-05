@@ -2,20 +2,21 @@
 
 
 install() {
-    echo "Installing Steam"
+    echo "[STEAM-INSTALL] Installing Steam"
     sudo apt update && sudo apt upgrade -y
     sudo dpkg --add-architecture i386
-    echo "Install Steam on Ubuntu via Steam APT Repository"
-    echo "Importing GPG key"
+    echo "[STEAM-INSTALL] Install Steam on Ubuntu via Steam APT Repository"
+    echo "[STEAM-INSTALL] Importing GPG key"
+    # File '/usr/share/keyrings/steam.gpg' exists. Overwrite? (y/N)
     curl -s http://repo.steampowered.com/steam/archive/stable/steam.gpg | sudo gpg --dearmor -o /usr/share/keyrings/steam.gpg > /dev/null
 
-    echo "Add steam apt repository"
+    echo "[STEAM-INSTALL] Add steam apt repository"
     echo deb [arch=amd64 signed-by=/usr/share/keyrings/steam.gpg] http://repo.steampowered.com/steam/ stable steam | sudo tee /etc/apt/sources.list.d/steam.list
 
-    echo "Update apt cache after steam PPA import"
+    echo "[STEAM-INSTALL] Update apt cache after steam PPA import"
     sudo apt update
 
-    echo "Install Steam via package manager"
+    echo "[STEAM-INSTALL] Install Steam via package manager"
     sudo apt install -y \
       libgl1-mesa-dri:amd64 \
       libgl1-mesa-dri:i386 \
@@ -23,17 +24,17 @@ install() {
       libgl1-mesa-glx:i386 \
       steam
 
-    echo "Remove extra lists"
+    echo "[STEAM-INSTALL] Remove extra lists"
     sudo rm /etc/apt/sources.list.d/steam-beta.list
     sudo rm /etc/apt/sources.list.d/steam-stable.list
 
-    echo "Refresh apt index"
+    echo "[STEAM-INSTALL] Refresh apt index"
     sudo apt update
 }
 
 
 uninstall() {
-    echo "Uninstalling Steam"
+    echo "[STEAM-INSTALL] Uninstalling Steam"
 }
 
 
