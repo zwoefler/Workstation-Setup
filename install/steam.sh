@@ -47,7 +47,7 @@ uninstall() {
     sudo rm /etc/apt/sources.list.d/steam*
 
     echo "[STEAM-UNINSTALL] Removing GPG key"
-    /usr/share/keyrings/steam.gpg
+    sudo rm /usr/share/keyrings/steam.gpg
 
     echo "[STEAM_UNINSTALL] Remove i386 architeture that dpkg is aware off"
     sudo dpkg --remove-architecture i386
