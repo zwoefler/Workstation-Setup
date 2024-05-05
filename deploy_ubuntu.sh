@@ -52,6 +52,10 @@ install_applications(){
 
 creative_profile() {
     echo "[DEPLOY UBUNTU] Installing CREATIVE profile"
+    sudo apt install -y \
+        gimp \
+        inkscape \
+        obs-studio
 }
 
 
