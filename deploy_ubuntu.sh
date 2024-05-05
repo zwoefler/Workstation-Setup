@@ -101,6 +101,7 @@ personal_profile() {
     echo "[DEPLOY UBUNTU] Installing PERSONAL profile"
     applications=(
         "obsidian"
+        "spotify"
     )
     install_applications "$applications"
 }
