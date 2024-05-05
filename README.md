@@ -75,7 +75,7 @@ MOst stuff luckily works in a browser nowadays:
 - [ ] Newline between steps in output
 - [ ] Add Uninstall function in deploy_ubuntu `--uninstall`
 - [ ] Run from web, detect running from web using URLs, otherwise use local files
-
+- [ ] When installing deb packages via hand, and there is an error, remove the deb package? Because on reruns this will result in naming issues! Or check if the pakcage already exists
 
 
 
